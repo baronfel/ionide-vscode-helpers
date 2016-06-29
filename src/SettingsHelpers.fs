@@ -33,9 +33,14 @@ module Settings =
         startingPage : string
     }
 
+    type FSISettings = {
+        fsiPath : string
+    }
+
     type Settings = {
         Fake : FakeSettings
         WebPreview : WebPreviewSettings
+        FSI : FSISettings
     }
 
     let loadOrDefault<'a> (map : Settings -> 'a)  (def :'a) =
